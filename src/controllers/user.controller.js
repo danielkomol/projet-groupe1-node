@@ -41,3 +41,33 @@ export async function refreshToken(req, res) {
     res.status(403).json({ message: "Refresh token invalide" });
   }
 }
+
+export async function updateUser(req, res) {
+  const userId = parseInt(req.params.id);
+  const { name, email, password } = req.body;
+
+  if (req.user.id !== userId) {
+    return res.status(403).json({ message: "Accès refusé" });
+  }
+
+  const updates = {};
+  if (name) updates.name = name;
+  if (email) updates.email = email;
+  if (password) {
+    const hashed = await bcrypt.hash(password, 10);
+    updates.password = hashed;
+  }
+
+  try {
+    const updated = await prisma.user.update({
+      where: { id: userId },
+      data: updates,
+    });
+    res.json({
+      message: "Utilisateur mis à jour",
+      user: { id: updated.id, email: updated.email, name: updated.name },
+    });
+  } catch (err) {
+    res.status(500).json({ message: "Erreur serveur", error: err.message });
+  }
+}
