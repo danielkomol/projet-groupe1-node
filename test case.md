@@ -51,6 +51,7 @@ Le plan est conçu pour une API avec **authentification JWT**, **utilisateurs**,
 | UT03 | `loginUser()`    | Identifiants valides     | login/pwd      | `200 OK` + access token         |
 | UT04 | `loginUser()`    | Mauvais mot de passe     | mauvais pwd    | `401 Unauthorized`              |
 | UT05 | `refreshToken()` | Token valide             | refreshToken   | nouveau access token            |
+| UT06 | `updateUser`     | Mise a jour de l'user    | userid         | `200 `+Utilisateur mis à jour   |
 
 #### 🔹 **4.2 Tests d’intégration**
 
