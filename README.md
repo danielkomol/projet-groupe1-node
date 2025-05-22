@@ -1,7 +1,3 @@
-Voici la documentation mise à jour de ton API **Propelize**, incluant la nouvelle **API utilisateurs avec authentification JWT**, la **mise à jour utilisateur**, et les instructions associées :
-
----
-
 # 🚀 Propelize Vehicle & User API
 
 API REST pour gérer les **véhicules** et les **utilisateurs** avec **authentification sécurisée JWT**, basée sur **Node.js**, **Express**, **Prisma** et **MySQL**.
@@ -87,5 +83,3 @@ API REST pour gérer les **véhicules** et les **utilisateurs** avec **authentif
 - Gestion des droits possible via le champ `role` (ex: `user`, `admin`).
 
 ---
-
-Souhaite-tu aussi que je te génère un fichier `README.md` directement basé sur cette doc ?
