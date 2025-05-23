@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
-const vehicleRoutes = require("./vehicle.routes");
-dotenv.config();
+const vehicleRoutes = require("./routes/vehicle.routes");
+//dotenv.config();
 
 app.use(express.json());
 app.use("/vehicles", vehicleRoutes);

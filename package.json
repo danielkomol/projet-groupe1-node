@@ -1,17 +1,20 @@
 {
   "name": "propelize-vehicle-api",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "src/server.js",
   "scripts": {
-    "dev": "node src/index.js"
+    "dev": "node src/server.js"
   },
   "dependencies": {
     "@prisma/client": "^5.0.0",
+    "bcrypt": "^6.0.0",
     "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "router": "^2.2.0",
     "supertest": "^7.1.1"
   },
   "devDependencies": {
-    "prisma": "^5.0.0",
+    "prisma": "^5.22.0",
     "vitest": "^3.1.4"
   }
 }
