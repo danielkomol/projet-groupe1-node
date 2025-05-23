@@ -5,8 +5,7 @@ import {
   refreshToken,
   updateUser,
 } from "../controllers/user.controller.js";
-import { updateUser } from "../controllers/user.controller.js";
-import { authenticate } from "../middlewares/auth.middleware.js";
+import { authenticate } from "../middleware/auth.middleware.js"; // Fix path
 
 const router = express.Router();
 

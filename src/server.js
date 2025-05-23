@@ -1,7 +1,11 @@
-const express = require("express");
-const app = express();
-const vehicleRoutes = require("./vehicle.routes");
+import dotenv from "dotenv";
+import express from "express";
+import vehicleRoutes from "./routes/vehicle.routes.js";
+// Fix the import path to match the actual file name
+import userRoutes from "./routes/user.route.js";
+
 dotenv.config();
+const app = express();
 
 app.use(express.json());
 app.use("/vehicles", vehicleRoutes);
